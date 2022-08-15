@@ -6,7 +6,7 @@ const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = (props) => {
 
   const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
-    const enteredText = todoTextinput.current!.value;
+    let enteredText = todoTextinput.current!.value;
 
     if (enteredText.trim().length === 0) {
       // throw error
